@@ -52,7 +52,7 @@ def capture():
                 key = unpack('>I',src_addr)[0] + int(src_port) + unpack('>I',dst_addr)[0] + int(dst_port)
                 if key not in state_track and str(flag) != '2':
                     print "Invalid state detected. "
-                    reset.main(socket.inet_ntoa(dst_addr), socket.inet_ntoa(src_addr), int(dst_port), int(src_port), int(ack_no), int(seq_no+1))
+                    #reset.main(socket.inet_ntoa(dst_addr), socket.inet_ntoa(src_addr), int(dst_port), int(src_port), int(ack_no), int(seq_no+1))
                     pass
                 elif key in state_track and str(flag) == '17':
                     state_track[key][7] += 1
