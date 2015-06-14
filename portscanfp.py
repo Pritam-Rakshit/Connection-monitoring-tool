@@ -79,7 +79,7 @@ def scan_ports():
 		try:
 			
 			sock.connect((remote_ip,port))
-                        sock.timeout(8)
+                        sock.settimeout(8)
 			h.write("Port" + str(port) + " | Service Name:" + socket.getservbyport(port) + "\n")
 			#print 'Port ' + str(port) + ' is open'+', Service Name:'+socket.getservbyport(port)
 			sock.close()
