@@ -28,7 +28,6 @@ def scan_ports():
 		    end_port=int(h.readline())
 		    h.close()
 	            try:
-		#host='tsoft-Vostro-1540'
 		        remote_ip = socket.gethostbyname(host)
 	#	print remote_ip
 	            except socket.error,error_msg:
@@ -50,7 +49,6 @@ def scan_ports():
 		    end_port=int(h.readline())
 		    h.close()
 	            try:
-		#host='tsoft-Vostro-1540'
 		        remote_ip = ip
 	#	print remote_ip
 	            except socket.error,error_msg:
